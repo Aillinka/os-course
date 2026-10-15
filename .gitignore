@@ -36,3 +36,7 @@ pr07_new/ipc_benchmark
 pr07_new/ipc_extra
 pr07_new/ipc_extra_backup.c
 pr07_new/ipc_extra_before_fix.c
+
+# PR8 compiled programs
+pr08_new/philosophers
+pr08_new/philosophers_deadlock

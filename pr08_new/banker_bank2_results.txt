@@ -1,0 +1,4 @@
+File: bank2.txt
+Available: [0, 1, 0]
+UNSAFE
+Completed processes: []

@@ -1,0 +1,8 @@
+
+Mode: trylock
+Philosopher | Meals | Max wait (ms)
+P0          | 3582     | 0.068
+P1          | 3557     | 0.045
+P2          | 3548     | 0.046
+P3          | 3562     | 0.040
+P4          | 3574     | 0.060
