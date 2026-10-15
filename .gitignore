@@ -30,3 +30,9 @@ pr06/lock_benchmark_debug
 # PR7 executable
 pr07/ipc_benchmark
 pr08/philosophers
+
+# PR7 compiled programs
+pr07_new/ipc_benchmark
+pr07_new/ipc_extra
+pr07_new/ipc_extra_backup.c
+pr07_new/ipc_extra_before_fix.c
