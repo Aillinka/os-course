@@ -9,3 +9,4 @@ pr02/*.bin
 pr02/copy_benchmark
 pr02/syscall_demo
 pr02/__pycache__/
+pr03/minishell

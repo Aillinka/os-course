@@ -1,0 +1,7 @@
+mini-shell> /home/aoli/os-course/pr03
+mini-shell> Hello Linux
+mini-shell> 3
+mini-shell> mini-shell> Hello World
+mini-shell> 5
+mini-shell> [background started] 7085
+mini-shell> 

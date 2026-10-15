@@ -1,0 +1,8 @@
+pwd
+echo Hello Linux
+echo "one two three" | wc -w
+echo Hello World > output.txt
+cat < output.txt
+ls | wc -l
+sleep 1 &
+exit
