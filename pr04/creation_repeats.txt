@@ -1,0 +1,12 @@
+=== Repeat 1 ===
+operation,iterations,total_seconds,average_us
+pthread_create,10000,0.509778,50.978
+fork,10000,0.878838,87.884
+=== Repeat 2 ===
+operation,iterations,total_seconds,average_us
+pthread_create,10000,0.490082,49.008
+fork,10000,0.887368,88.737
+=== Repeat 3 ===
+operation,iterations,total_seconds,average_us
+pthread_create,10000,0.486131,48.613
+fork,10000,0.884002,88.400

@@ -1,0 +1,3 @@
+operation,iterations,total_seconds,average_us
+pthread_create,10000,0.497430,49.743
+fork,10000,0.897586,89.759

@@ -10,3 +10,8 @@ pr02/copy_benchmark
 pr02/syscall_demo
 pr02/__pycache__/
 pr03/minishell
+
+# PR4 binaries
+pr04/parallel_sum
+pr04/creation_cost
+pr04/false_sharing
