@@ -1,0 +1,14 @@
+● machine-clock.service - OS Course Clock Logger
+     Loaded: loaded (/etc/systemd/system/machine-clock.service; enabled; preset: enabled)
+     Active: active (running) since Thu 2026-10-15 14:52:38 +06; 11s ago
+ Invocation: 047eaecab3a64365b1e7e51da7d86a20
+   Main PID: 11994 (python3)
+      Tasks: 1 (limit: 2263)
+     Memory: 6.5M (peak: 6.6M)
+        CPU: 13ms
+     CGroup: /system.slice/machine-clock.service
+             └─11994 /usr/bin/python3 /home/aoli/os-course/pr01/clock.py
+
+Oct 15 14:52:38 ubuntu systemd[1]: Started machine-clock.service - OS Course Clock Logger.
+Oct 15 14:52:38 ubuntu python3[11994]: Recorded: 2026-10-15T14:52:38
+Oct 15 14:52:48 ubuntu python3[11994]: Recorded: 2026-10-15T14:52:48

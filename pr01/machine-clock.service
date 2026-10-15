@@ -1,0 +1,15 @@
+[Unit]
+Description=OS Course Clock Logger
+After=local-fs.target
+
+[Service]
+Type=simple
+User=aoli
+WorkingDirectory=/home/aoli/os-course/pr01
+Environment=HOME=/home/aoli
+ExecStart=/usr/bin/python3 /home/aoli/os-course/pr01/clock.py
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
