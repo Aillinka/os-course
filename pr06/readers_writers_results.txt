@@ -1,0 +1,65 @@
+=== REPEAT 1 ===
+mode=reader
+final_data=2000 expected=2000
+violations=0
+writer_0_wait=0.000056 seconds
+writer_1_wait=0.000058 seconds
+elapsed=0.001493 seconds
+mode=fair
+final_data=2000 expected=2000
+violations=0
+writer_0_wait=0.000147 seconds
+writer_1_wait=0.000246 seconds
+elapsed=0.001064 seconds
+=== REPEAT 2 ===
+mode=reader
+final_data=2000 expected=2000
+violations=0
+writer_0_wait=0.000339 seconds
+writer_1_wait=0.000218 seconds
+elapsed=0.000958 seconds
+mode=fair
+final_data=2000 expected=2000
+violations=0
+writer_0_wait=0.000367 seconds
+writer_1_wait=0.000148 seconds
+elapsed=0.001598 seconds
+=== REPEAT 3 ===
+mode=reader
+final_data=2000 expected=2000
+violations=0
+writer_0_wait=0.000181 seconds
+writer_1_wait=0.000374 seconds
+elapsed=0.001057 seconds
+mode=fair
+final_data=2000 expected=2000
+violations=0
+writer_0_wait=0.000340 seconds
+writer_1_wait=0.000692 seconds
+elapsed=0.001540 seconds
+=== REPEAT 4 ===
+mode=reader
+final_data=2000 expected=2000
+violations=0
+writer_0_wait=0.000848 seconds
+writer_1_wait=0.000670 seconds
+elapsed=0.001438 seconds
+mode=fair
+final_data=2000 expected=2000
+violations=0
+writer_0_wait=0.000440 seconds
+writer_1_wait=0.000324 seconds
+elapsed=0.001639 seconds
+=== REPEAT 5 ===
+mode=reader
+final_data=2000 expected=2000
+violations=0
+writer_0_wait=0.000618 seconds
+writer_1_wait=0.000548 seconds
+elapsed=0.001325 seconds
+mode=fair
+final_data=2000 expected=2000
+violations=0
+writer_0_wait=0.000537 seconds
+writer_1_wait=0.000435 seconds
+elapsed=0.001400 seconds

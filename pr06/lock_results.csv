@@ -1,0 +1,13 @@
+lock,threads,section,seconds,correct
+mutex,2,short,0.002846,YES
+mutex,4,short,0.001151,YES
+mutex,16,short,0.007841,YES
+mutex,2,long,0.053888,YES
+mutex,4,long,0.125133,YES
+mutex,16,long,0.415244,YES
+spinlock,2,short,0.001688,YES
+spinlock,4,short,0.008208,YES
+spinlock,16,short,0.091049,YES
+spinlock,2,long,0.038858,YES
+spinlock,4,long,0.086358,YES
+spinlock,16,long,1.021107,YES

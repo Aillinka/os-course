@@ -19,3 +19,10 @@ pr04/false_sharing
 # Python cache
 __pycache__/
 *.pyc
+
+pr06/race_demo
+pr06/race_fixed
+pr06/readers_writers
+pr06/readers_writers_tsan
+pr06/lock_benchmark
+pr06/lock_benchmark_debug

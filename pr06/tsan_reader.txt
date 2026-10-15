@@ -1,0 +1,44 @@
+==================
+WARNING: ThreadSanitizer: lock-order-inversion (potential deadlock) (pid=89866)
+  Cycle in lock order graph: M0 (0xaaaaaaac0050) => M1 (0xaaaaaaac0088) => M0
+
+  Mutex M1 acquired here while holding mutex M0 in thread T1:
+    #0 pthread_mutex_lock ../../../../src/libsanitizer/tsan/tsan_interceptors_posix.cpp:1424 (libtsan.so.2+0x5dc5c) (BuildId: 92f14145646a32a217effb45501763763addc1bd)
+    #1 reader_enter /home/aoli/os-course/pr06/readers_writers.c:46 (readers_writers_tsan+0xebc) (BuildId: 1a10f108db5434d21b86a5561c2233526e1c8acb)
+    #2 reader_thread /home/aoli/os-course/pr06/readers_writers.c:69 (readers_writers_tsan+0xebc)
+
+    Hint: use TSAN_OPTIONS=second_deadlock_stack=1 to get more informative warning message
+
+  Mutex M0 acquired here while holding mutex M1 in thread T1:
+    #0 pthread_mutex_lock ../../../../src/libsanitizer/tsan/tsan_interceptors_posix.cpp:1424 (libtsan.so.2+0x5dc5c) (BuildId: 92f14145646a32a217effb45501763763addc1bd)
+    #1 reader_leave /home/aoli/os-course/pr06/readers_writers.c:55 (readers_writers_tsan+0xf7c) (BuildId: 1a10f108db5434d21b86a5561c2233526e1c8acb)
+    #2 reader_thread /home/aoli/os-course/pr06/readers_writers.c:81 (readers_writers_tsan+0xf7c)
+
+  Thread T1 (tid=89868, running) created by main thread at:
+    #0 pthread_create ../../../../src/libsanitizer/tsan/tsan_interceptors_posix.cpp:1078 (libtsan.so.2+0x5e83c) (BuildId: 92f14145646a32a217effb45501763763addc1bd)
+    #1 main /home/aoli/os-course/pr06/readers_writers.c:149 (readers_writers_tsan+0x136c) (BuildId: 1a10f108db5434d21b86a5561c2233526e1c8acb)
+
+SUMMARY: ThreadSanitizer: lock-order-inversion (potential deadlock) /home/aoli/os-course/pr06/readers_writers.c:46 in reader_enter
+==================
+==================
+WARNING: ThreadSanitizer: unlock of an unlocked mutex (or by a wrong thread) (pid=89866)
+    #0 pthread_mutex_unlock ../../../../src/libsanitizer/tsan/tsan_interceptors_posix.cpp:1458 (libtsan.so.2+0x5accc) (BuildId: 92f14145646a32a217effb45501763763addc1bd)
+    #1 reader_leave /home/aoli/os-course/pr06/readers_writers.c:60 (readers_writers_tsan+0xfa4) (BuildId: 1a10f108db5434d21b86a5561c2233526e1c8acb)
+    #2 reader_thread /home/aoli/os-course/pr06/readers_writers.c:81 (readers_writers_tsan+0xfa4)
+
+  Location is global 'resource' of size 48 at 0xaaaaaaac0088 (readers_writers_tsan+0x20088)
+
+  Mutex M0 (0xaaaaaaac0088) created at:
+    #0 pthread_mutex_lock ../../../../src/libsanitizer/tsan/tsan_interceptors_posix.cpp:1424 (libtsan.so.2+0x5dc5c) (BuildId: 92f14145646a32a217effb45501763763addc1bd)
+    #1 reader_enter /home/aoli/os-course/pr06/readers_writers.c:46 (readers_writers_tsan+0xebc) (BuildId: 1a10f108db5434d21b86a5561c2233526e1c8acb)
+    #2 reader_thread /home/aoli/os-course/pr06/readers_writers.c:69 (readers_writers_tsan+0xebc)
+
+SUMMARY: ThreadSanitizer: unlock of an unlocked mutex (or by a wrong thread) /home/aoli/os-course/pr06/readers_writers.c:60 in reader_leave
+==================
+ThreadSanitizer: reported 2 warnings
+mode=reader
+final_data=2000 expected=2000
+violations=0
+writer_0_wait=0.004623 seconds
+writer_1_wait=0.005841 seconds
+elapsed=0.064126 seconds

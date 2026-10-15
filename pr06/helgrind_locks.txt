@@ -1,0 +1,137 @@
+==89241== Helgrind, a thread error detector
+==89241== Copyright (C) 2007-2024, and GNU GPL'd, by OpenWorks LLP et al.
+==89241== Using Valgrind-3.26.0 and LibVEX; rerun with -h for copyright info
+==89241== Command: ./lock_benchmark_debug
+==89241== Parent PID: 3629
+==89241== 
+==89241== ---Thread-Announcement------------------------------------------
+==89241== 
+==89241== Thread #47 was created
+==89241==    at 0x49E6903: clone (clone.S:59)
+==89241==    by 0x497BD57: create_thread (pthread_create.c:298)
+==89241==    by 0x497C923: pthread_create@@GLIBC_2.34 (pthread_create.c:863)
+==89241==    by 0x48B3C5B: pthread_create_WRK (hg_intercepts.c:449)
+==89241==    by 0x4000D47: main (lock_benchmark.c:86)
+==89241== 
+==89241== ---Thread-Announcement------------------------------------------
+==89241== 
+==89241== Thread #46 was created
+==89241==    at 0x49E6903: clone (clone.S:59)
+==89241==    by 0x497BD57: create_thread (pthread_create.c:298)
+==89241==    by 0x497C923: pthread_create@@GLIBC_2.34 (pthread_create.c:863)
+==89241==    by 0x48B3C5B: pthread_create_WRK (hg_intercepts.c:449)
+==89241==    by 0x4000D47: main (lock_benchmark.c:86)
+==89241== 
+==89241== ----------------------------------------------------------------
+==89241== 
+==89241== Possible data race during read of size 1 at 0x4020018 by thread #47
+==89241== Locks held: none
+==89241==    at 0x4000EAC: __aarch64_swp1_acq (in /home/aoli/os-course/pr06/lock_benchmark_debug)
+==89241==    by 0x4000BB3: lock_spin (lock_benchmark.c:29)
+==89241==    by 0x4000BB3: worker (lock_benchmark.c:46)
+==89241==    by 0x48B3E3F: mythread_wrapper (hg_intercepts.c:410)
+==89241==    by 0x497C247: start_thread (pthread_create.c:454)
+==89241==    by 0x49E692B: thread_start (clone.S:76)
+==89241== 
+==89241== This conflicts with a previous write of size 1 by thread #46
+==89241== Locks held: none
+==89241==    at 0x4000BD4: unlock_spin (lock_benchmark.c:36)
+==89241==    by 0x4000BD4: worker (lock_benchmark.c:60)
+==89241==    by 0x48B3E3F: mythread_wrapper (hg_intercepts.c:410)
+==89241==    by 0x497C247: start_thread (pthread_create.c:454)
+==89241==    by 0x49E692B: thread_start (clone.S:76)
+==89241==  Address 0x4020018 is 0 bytes inside data symbol "spin"
+==89241== 
+==89241== ----------------------------------------------------------------
+==89241== 
+==89241== Possible data race during read of size 8 at 0x4020050 by thread #47
+==89241== Locks held: none
+==89241==    at 0x4000BB8: worker (lock_benchmark.c:50)
+==89241==    by 0x48B3E3F: mythread_wrapper (hg_intercepts.c:410)
+==89241==    by 0x497C247: start_thread (pthread_create.c:454)
+==89241==    by 0x49E692B: thread_start (clone.S:76)
+==89241== 
+==89241== This conflicts with a previous write of size 8 by thread #46
+==89241== Locks held: none
+==89241==    at 0x4000BC0: worker (lock_benchmark.c:50)
+==89241==    by 0x48B3E3F: mythread_wrapper (hg_intercepts.c:410)
+==89241==    by 0x497C247: start_thread (pthread_create.c:454)
+==89241==    by 0x49E692B: thread_start (clone.S:76)
+==89241==  Address 0x4020050 is 0 bytes inside data symbol "counter"
+==89241== 
+==89241== ----------------------------------------------------------------
+==89241== 
+==89241== Possible data race during write of size 8 at 0x4020050 by thread #47
+==89241== Locks held: none
+==89241==    at 0x4000BC0: worker (lock_benchmark.c:50)
+==89241==    by 0x48B3E3F: mythread_wrapper (hg_intercepts.c:410)
+==89241==    by 0x497C247: start_thread (pthread_create.c:454)
+==89241==    by 0x49E692B: thread_start (clone.S:76)
+==89241== 
+==89241== This conflicts with a previous write of size 8 by thread #46
+==89241== Locks held: none
+==89241==    at 0x4000BC0: worker (lock_benchmark.c:50)
+==89241==    by 0x48B3E3F: mythread_wrapper (hg_intercepts.c:410)
+==89241==    by 0x497C247: start_thread (pthread_create.c:454)
+==89241==    by 0x49E692B: thread_start (clone.S:76)
+==89241==  Address 0x4020050 is 0 bytes inside data symbol "counter"
+==89241== 
+==89241== ----------------------------------------------------------------
+==89241== 
+==89241== Possible data race during write of size 1 at 0x4020018 by thread #47
+==89241== Locks held: none
+==89241==    at 0x4000BD4: unlock_spin (lock_benchmark.c:36)
+==89241==    by 0x4000BD4: worker (lock_benchmark.c:60)
+==89241==    by 0x48B3E3F: mythread_wrapper (hg_intercepts.c:410)
+==89241==    by 0x497C247: start_thread (pthread_create.c:454)
+==89241==    by 0x49E692B: thread_start (clone.S:76)
+==89241== 
+==89241== This conflicts with a previous write of size 1 by thread #46
+==89241== Locks held: none
+==89241==    at 0x4000BD4: unlock_spin (lock_benchmark.c:36)
+==89241==    by 0x4000BD4: worker (lock_benchmark.c:60)
+==89241==    by 0x48B3E3F: mythread_wrapper (hg_intercepts.c:410)
+==89241==    by 0x497C247: start_thread (pthread_create.c:454)
+==89241==    by 0x49E692B: thread_start (clone.S:76)
+==89241==  Address 0x4020018 is 0 bytes inside data symbol "spin"
+==89241== 
+==89241== ---Thread-Announcement------------------------------------------
+==89241== 
+==89241== Thread #69 was created
+==89241==    at 0x49E6903: clone (clone.S:59)
+==89241==    by 0x497BD57: create_thread (pthread_create.c:298)
+==89241==    by 0x497C923: pthread_create@@GLIBC_2.34 (pthread_create.c:863)
+==89241==    by 0x48B3C5B: pthread_create_WRK (hg_intercepts.c:449)
+==89241==    by 0x4000D47: main (lock_benchmark.c:86)
+==89241== 
+==89241== ---Thread-Announcement------------------------------------------
+==89241== 
+==89241== Thread #68 was created
+==89241==    at 0x49E6903: clone (clone.S:59)
+==89241==    by 0x497BD57: create_thread (pthread_create.c:298)
+==89241==    by 0x497C923: pthread_create@@GLIBC_2.34 (pthread_create.c:863)
+==89241==    by 0x48B3C5B: pthread_create_WRK (hg_intercepts.c:449)
+==89241==    by 0x4000D47: main (lock_benchmark.c:86)
+==89241== 
+==89241== ----------------------------------------------------------------
+==89241== 
+==89241== Possible data race during write of size 8 at 0x4020058 by thread #69
+==89241== Locks held: none
+==89241==    at 0x4000B84: worker (lock_benchmark.c:56)
+==89241==    by 0x48B3E3F: mythread_wrapper (hg_intercepts.c:410)
+==89241==    by 0x497C247: start_thread (pthread_create.c:454)
+==89241==    by 0x49E692B: thread_start (clone.S:76)
+==89241== 
+==89241== This conflicts with a previous write of size 8 by thread #68
+==89241== Locks held: none
+==89241==    at 0x4000B84: worker (lock_benchmark.c:56)
+==89241==    by 0x48B3E3F: mythread_wrapper (hg_intercepts.c:410)
+==89241==    by 0x497C247: start_thread (pthread_create.c:454)
+==89241==    by 0x49E692B: thread_start (clone.S:76)
+==89241==  Address 0x4020058 is 0 bytes inside data symbol "sink"
+==89241== 
+==89241== 
+==89241== Use --history-level=approx or =none to gain increased speed, at
+==89241== the cost of reduced accuracy of conflicting-access information
+==89241== For lists of detected and suppressed errors, rerun with: -s
+==89241== ERROR SUMMARY: 179 errors from 5 contexts (suppressed: 2223235 from 8)

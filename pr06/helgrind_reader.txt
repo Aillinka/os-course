@@ -1,0 +1,11 @@
+==90174== Helgrind, a thread error detector
+==90174== Copyright (C) 2007-2024, and GNU GPL'd, by OpenWorks LLP et al.
+==90174== Using Valgrind-3.26.0 and LibVEX; rerun with -h for copyright info
+==90174== Command: ./readers_writers reader
+==90174== Parent PID: 90173
+==90174== 
+==90174== 
+==90174== Use --history-level=approx or =none to gain increased speed, at
+==90174== the cost of reduced accuracy of conflicting-access information
+==90174== For lists of detected and suppressed errors, rerun with: -s
+==90174== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 81055 from 28)

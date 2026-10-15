@@ -1,0 +1,6 @@
+mode=reader
+final_data=2000 expected=2000
+violations=0
+writer_0_wait=0.000118 seconds
+writer_1_wait=0.001513 seconds
+elapsed=0.002403 seconds

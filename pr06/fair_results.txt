@@ -1,0 +1,6 @@
+mode=fair
+final_data=2000 expected=2000
+violations=0
+writer_0_wait=0.000471 seconds
+writer_1_wait=0.000467 seconds
+elapsed=0.001820 seconds
