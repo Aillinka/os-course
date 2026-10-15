@@ -26,3 +26,6 @@ pr06/readers_writers
 pr06/readers_writers_tsan
 pr06/lock_benchmark
 pr06/lock_benchmark_debug
+
+# PR7 executable
+pr07/ipc_benchmark

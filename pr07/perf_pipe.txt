@@ -1,0 +1,11 @@
+
+ Performance counter stats for './ipc_benchmark pipe 4096 4':
+
+   <not supported>      cpu-cycles:u                     #      nan GHz  cycles_frequency     
+
+       0.005630463 seconds time elapsed
+
+       0.004002000 seconds user
+       0.000997000 seconds sys
+
+
