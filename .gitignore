@@ -29,3 +29,4 @@ pr06/lock_benchmark_debug
 
 # PR7 executable
 pr07/ipc_benchmark
+pr08/philosophers

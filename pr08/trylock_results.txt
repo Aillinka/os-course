@@ -1,0 +1,7 @@
+mode=trylock
+philosopher,meals,max_wait_seconds
+P0,21379,0.000224
+P1,21455,0.001167
+P2,21419,0.000116
+P3,21373,0.000120
+P4,21373,0.000119

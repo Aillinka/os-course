@@ -1,0 +1,7 @@
+mode=ordered
+philosopher,meals,max_wait_seconds
+P0,17054,0.007157
+P1,18433,0.004315
+P2,18817,0.005160
+P3,19049,0.004157
+P4,17060,0.004612

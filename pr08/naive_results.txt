@@ -1,0 +1,2 @@
+DEADLOCK DEMONSTRATION
+All philosophers hold one fork and wait.

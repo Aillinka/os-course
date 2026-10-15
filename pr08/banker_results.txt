@@ -1,0 +1,5 @@
+Available: [3, 3, 2]
+SAFE
+Sequence: P1 -> P3 -> P4 -> P0 -> P2
+Available: [0, 1, 0]
+UNSAFE
