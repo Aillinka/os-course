@@ -15,3 +15,7 @@ pr03/minishell
 pr04/parallel_sum
 pr04/creation_cost
 pr04/false_sharing
+
+# Python cache
+__pycache__/
+*.pyc

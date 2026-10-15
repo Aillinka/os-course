@@ -1,0 +1,7 @@
+dataset,algorithm,waiting,turnaround,response,switches
+set1.txt,srtf,6.5,13.0,4.25,4
+set1.txt,mlfq,13.0,19.5,1.5,9
+set2.txt,srtf,140.55,158.2,140.55,19
+set2.txt,mlfq,283.25,300.9,10.45,176
+set3.txt,srtf,6.85,12.65,5.05,20
+set3.txt,mlfq,12.75,18.55,6.55,26

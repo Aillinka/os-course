@@ -1,0 +1,10 @@
+=== SCHEDULING POLICY ===
+pid 3629's current scheduling policy: SCHED_OTHER
+pid 3629's current scheduling priority: 0
+pid 3629's current runtime parameter: 2100000
+
+=== KERNEL ===
+7.0.0-31-generic
+
+=== CPU ===
+4
