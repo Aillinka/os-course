@@ -1,8 +1,0 @@
-
-Mode: waiter
-Philosopher | Meals | Max wait (ms)
-P0          | 2042     | 5.450
-P1          | 2042     | 5.619
-P2          | 2042     | 4.849
-P3          | 2041     | 5.351
-P4          | 2043     | 5.388
